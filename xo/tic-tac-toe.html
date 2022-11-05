@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="main.css" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <script src="tic-tac-toe.js" type="text/javascript"></script>
+  <script src="tic-tac-toe.ru.js" charset="UTF-8" type="text/javascript"></script>
+</head>
+<body>  
+
+<div id="players">	
+	
+	<div id="lang-switch">
+		<input id="lang-en" type="button" value="EN"/> 
+		<input id="lang-ru" type="button" value="RU"/> 
+	</div>
+	<div id="buttons">
+		<input id="reset-game" type="button" class="run_button" value="Configure players"/> 
+		<input id="start-game" type="button" class="run_button" value="Start Game"/> 
+	</div>		
+	<div id="player-1" class="player">
+		<span>Player X</span>:	
+		<div id="player-1-human" class="player_type">Human</div>
+		<div id="player-1-bot1" class="player_type">Novice</div>
+		<div id="player-1-bot2" class="player_type">Junior</div>
+		<div id="player-1-bot3" class="player_type">Expert</div>
+	 
+		<div id="player-1-score" class="player_score">X-Score:  </div>
+	</div>
+	<div id="player-2" class="player">
+		<span>Player O</span>:
+	
+		<div id="player-2-human" class="player_type">Human</div>
+		<div id="player-2-bot1" class="player_type">Novice</div>
+		<div id="player-2-bot2" class="player_type">Junior</div>
+		<div id="player-2-bot3" class="player_type">Expert</div>		
+	
+		<div id="player-2-score" class="player_score">O-Score:  </div>
+	</div>	
+	<div >
+		<div id="games-count"> Games played:  </div>
+	</div>
+	<div id="game-winner">
+		<span class="draw"> It's DRAW ! </span>
+		<span class="waiting"> Hey, Human, your turn ! </span>
+		<span class="player-1"> X - Wins!</span>
+		<span class="player-2"> O - Wins!</span>
+	</div>
+</div>
+<table id="board">
+	<tr> <td id="cell0" class="xocell"><div></td> <td id="cell1" class="xocell"><div></td> <td id="cell2" class="xocell"><div></td> </tr>
+	<tr> <td id="cell3" class="xocell"><div></td> <td id="cell4" class="xocell"><div></td> <td id="cell5" class="xocell"><div></td> </tr>
+	<tr> <td id="cell6" class="xocell"><div></td> <td id="cell7" class="xocell"><div></td> <td id="cell8" class="xocell"><div></td> </tr>
+</table>
+</body>
+</html>

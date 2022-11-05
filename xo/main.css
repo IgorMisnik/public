@@ -1,0 +1,199 @@
+body {
+	font-size: 14px;
+	font-family: 'Comic Sans MS', Helvetica, sans-serif;   
+	max-width: 400px;
+
+	margin-left:auto;  	
+	margin-right:auto; 	
+}
+
+#board {
+	-webkit-user-select: none; 
+	width: 100%;
+	height: 400px;
+	margin-left:auto;  	
+	margin-right:auto; 	
+	transition-duration: 1200ms;  
+	
+}
+#board td {
+	height: 30%;
+	width: 30%;
+	text-align: center;
+	font-size: 80px;
+	border: 2px solid #cccccc;
+	border-radius: 20px;
+}
+
+#board.disabled {
+	background-color: #e0e0e0;
+	transition-duration: 1000ms;  
+}
+
+
+#players {
+	min-height: 150px;
+	-webkit-user-select: none; 
+	width: 100%;
+	
+}
+#lang-switch {
+	position: absolute;
+	right: 10px;
+}
+#lang-switch input {
+	display: block;
+	width: auto;
+	padding: 0px 10px 2px 10px;
+	margin: 0px 0 10px 10px; 
+	border-radius: 20px;
+}
+#players > div {
+	display: block;
+	color: gray;
+	transition-duration: 200ms;
+	width: auto;
+}
+
+#games-count {
+	border-style: solid none none none;
+	float: right;
+}
+#games-count[value]:after {
+	content: attr(value);
+}
+
+#game-winner  {
+	border-style: solid none none none;
+	font-size: 120%;
+}
+#game-winner > * {
+	display: none;
+}
+#game-winner[value="draw"] > .draw {	
+	display: block;
+	color: blue;
+}
+#game-winner[value="player-1"] > .player-1 {	
+	display: block;
+	color: green;
+}
+#game-winner[value="player-2"] > .player-2 {	
+	display: block;
+	color: green;
+}
+#game-winner[value="waiting"] > .waiting {	
+	display: block;
+	color: red;
+}
+.player_score {
+	display: inline-block;
+	width: auto;
+	float: right;
+}
+.player_score:after {
+	content: attr(value);
+}
+.configure  .player_score, .configure  #games-count, .player_type {
+	display: none;
+}
+
+.configure  .player  {
+	font-size:130%;
+}
+
+.player.won {
+	transform: scale(1, 1.5);
+	background-color: lightgreen;
+}
+
+.player_type.selected {
+	display: inline-block;
+	color: blue;
+}
+
+.configure  .player_type {
+	display: inline-block;
+	color: black;
+	cursor: pointer;
+}
+.configure   .player_type.selected {
+	display: inline-block;
+	color: blue;
+	cursor: default;
+	text-decoration: underline;
+}
+.run_button {
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+	align-content: center;
+	font-family: 'Comic Sans MS', Helvetica, sans-serif;
+	border-radius: 20px;
+}
+.current_player {
+	color: black !important;
+	transform: scale(1, 1.5);
+}
+
+.xocell[data-marker="1"] > div:before {
+	content: "X";
+	color: #663366;
+}
+.xocell[data-marker="2"] > div:before {
+	content: "O";
+	color: #CC0033;
+}
+.xocell.won {
+	background-color: lightgreen;
+}
+@media screen and (max-height: 600px) {
+	#board {
+		width: 230px;
+		height: 230px;
+	}
+	#board td {
+		font-size: 40px;
+		border-radius: 20px;
+	}
+}
+@media screen and (max-width: 450px) {
+	body {
+		font-size: 14px;
+		max-width: 300px;			
+	}
+	.configure  .player  {
+		font-size:100%;
+		padding-top: 10px;
+	}	
+}
+@media screen and (max-height: 400px) and (min-width: 520px) and (orientation: landscape) {
+	body {
+		font-size: 14px;
+		display: inline;
+	}
+	#players {
+		margin: 10px 10px 10px 10px;
+		float: left;
+		width: auto;
+	}
+	.configure  .player  {
+		font-size: 100%;
+		padding-top: 10px;
+	}		
+	#lang-switch {
+		left: 260px;
+		right: 290px;
+	}	
+	#board {
+		float: right;
+		width: 200px;
+		height: 200px;
+		margin: 5px 5px;
+	}
+	#board td {
+		font-size: 36px;
+		border-radius: 20px;
+	}
+}
+
