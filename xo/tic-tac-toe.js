@@ -134,6 +134,7 @@
     
     let dom = {        
         lang_en:    xoutil.event("lang-en"),
+        lang_ua:    xoutil.event("lang-ua"),
         lang_ru:    xoutil.event("lang-ru"),
         reset_game: xoutil.event("reset-game"),
         start_game: xoutil.event("start-game"),
@@ -178,6 +179,7 @@
 
     xogame.init = function() {
         dom.lang_en.bind( function() { xoutil.restoreDom() } );
+        dom.lang_ua.bind( function() { xoutil.updateDom( uaDom ) } );
         dom.lang_ru.bind( function() { xoutil.updateDom( ruDom ) } );
         dom.reset_game.bind( xogame.resetGame );
         dom.start_game.bind( xogame.startGame );
